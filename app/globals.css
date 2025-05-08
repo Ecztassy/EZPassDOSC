@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 0, 0, 0;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+  font-family: "Courier New", Courier, monospace;
+}
+
+/* Custom scrollbar for the ASCII OS look */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+  border: 1px solid #22c55e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #22c55e;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #16a34a;
+}
+
+/* Cursor styles for dragging */
+.window-title-bar {
+  cursor: grab;
+}
+
+.window-title-bar:active {
+  cursor: grabbing;
+}
