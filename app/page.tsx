@@ -12,7 +12,6 @@ export default function Home() {
   return (
     <div className="font-mono bg-black text-green-500 min-h-screen p-4 overflow-hidden relative">
       <div className="border border-green-500 p-2 mb-4">
-
         <pre className="text-center">
   {String.raw`
  _____ ____________  ___   _____ _____           ______ _____ _____  _____ 
@@ -74,25 +73,25 @@ function ProgramDocumentation() {
           <div>
             <h2 className="text-xl mb-4">Geral</h2>
             <p className="mb-2">
-              O <strong>EZPass</strong> é um gerenciador de senhas seguro e portátil, projetado para armazenar, gerenciar e preencher automaticamente credenciais de login em websites. Ele utiliza criptografia robusta, um banco de dados SQLite, e comunicação via WebSocket para integração com extensões de navegador, oferecendo uma experiência de usuário fluida e segura.
+              O <strong>EZPass</strong> é um gestor de palavras-passe seguro e portátil, concebido para armazenar, gerir e preencher automaticamente credenciais de login em websites. Utiliza encriptação robusta, uma base de dados SQLite, e comunicação via WebSocket para integração com extensões de navegador, oferecendo uma experiência de utilizador fluida e segura.
             </p>
-            <h3 className="text-lg mt-4 mb-2">Propósito do Programa</h3>
+            <h3 className="text-lg mt-4 mb-2">Objetivo do Programa</h3>
             <p className="mb-2">
               O EZPass foi desenvolvido para:
             </p>
             <ul className="list-disc pl-6 mb-4">
-              <li className="mb-1">Armazenar senhas com segurança usando Argon2 e criptografia simétrica.</li>
+              <li className="mb-1">Armazenar palavras-passe com segurança usando Argon2 e encriptação simétrica.</li>
               <li className="mb-1">Preencher automaticamente credenciais em websites via WebSocket.</li>
-              <li className="mb-1">Gerenciar bancos de dados com suporte a chaves mestras.</li>
+              <li className="mb-1">Gerir bases de dados com suporte a chaves mestras.</li>
               <li className="mb-1">Oferecer uma interface gráfica intuitiva com Slint.</li>
               <li className="mb-1">Suportar Windows, Linux e macOS com portabilidade total.</li>
             </ul>
             <p className="mb-2">
-              O programa é ideal para usuários que desejam uma solução local para gerenciar senhas, garantindo maior controle e privacidade.
+              O programa é ideal para utilizadores que desejam uma solução local para gerir palavras-passe, garantindo maior controlo e privacidade.
             </p>
             <h3 className="text-lg mt-4 mb-2">Estrutura do Programa</h3>
             <p className="mb-2">
-              O EZPass é dividido da seguinte maneira:
+              O EZPass está organizado da seguinte forma:
             </p>
             <pre className="border border-green-500 p-2 my-4">
               {`
@@ -103,9 +102,9 @@ function ProgramDocumentation() {
 +---------------------------+
 |                           |
 |  - Interface              |
-|  - Criptografia           |
-|  - Gerenciamento de       |
-|    Arquivos               |
+|  - Encriptação            |
+|  - Gestão de              |
+|    Ficheiros              |
 |  - WebSocket              |
 |                           |
 +---------------------------+
@@ -113,27 +112,27 @@ function ProgramDocumentation() {
             </pre>
             <h4 className="text-md mt-4 mb-2">Interface</h4>
             <p className="mb-2">
-              Utiliza Slint para uma interface gráfica responsiva, com janelas para login, gerenciamento de senhas, importação/exportação de bancos de dados e configuração de inicialização automática.
+              Utiliza Slint para uma interface gráfica responsiva, com janelas para login, gestão de palavras-passe, importação/exportação de bases de dados e configuração de arranque automático.
             </p>
-            <h4 className="text-md mt-4 mb-2">Criptografia</h4>
+            <h4 className="text-md mt-4 mb-2">Encriptação</h4>
             <p className="mb-2">
-              Usa Argon2 para hash de senhas, criptografia simétrica para senhas armazenadas, e chaves mestras (.masterkey) para autenticação alternativa.
+              Usa Argon2 para hash de palavras-passe, encriptação simétrica para palavras-passe armazenadas, e chaves mestras (.masterkey) para autenticação alternativa.
             </p>
-            <h4 className="text-md mt-4 mb-2">Gerenciamento de Arquivos</h4>
+            <h4 className="text-md mt-4 mb-2">Gestão de Ficheiros</h4>
             <p className="mb-2">
-              Armazena dados em SQLite com tabelas para usuários, senhas, preferências de campos e configurações de websites. Um arquivo config.json gerencia bancos de dados registrados.
+              Armazena dados em SQLite com tabelas para utilizadores, palavras-passe, preferências de campos e configurações de websites. Um ficheiro config.json gere bases de dados registadas.
             </p>
             <h4 className="text-md mt-4 mb-2">WebSocket</h4>
             <p className="mb-2">
-              Um servidor WebSocket (127.0.0.1:9001) integra-se com extensões de navegador, processando mensagens para autopreenchimento e salvamento de credenciais.
+              Um servidor WebSocket (127.0.0.1:9001) integra-se com extensões de navegador, processando mensagens para preenchimento automático e gravação de credenciais.
             </p>
             <h3 className="text-lg mt-4 mb-2">Como Funciona</h3>
             <ol className="list-decimal pl-6 mb-4">
-              <li className="mb-1"><strong>Autenticação</strong>: Login com usuário/senha ou chave mestra, verificado por Argon2.</li>
-              <li className="mb-1"><strong>Gerenciamento de Senhas</strong>: Adição, edição e exclusão de senhas via interface gráfica.</li>
-              <li className="mb-1"><strong>Autopreenchimento</strong>: Extensão do navegador consulta o WebSocket para preencher formulários.</li>
-              <li className="mb-1"><strong>Importação/Exportação</strong>: Bancos de dados são importados/exportados com chaves mestras.</li>
-              <li className="mb-1"><strong>Inicialização Automática</strong>: Configurável para iniciar com o sistema operacional.</li>
+              <li className="mb-1"><strong>Autenticação</strong>: Login com utilizador/palavra-passe ou chave mestra, verificado por Argon2.</li>
+              <li className="mb-1"><strong>Gestão de Palavras-passe</strong>: Adição, edição e remoção de palavras-passe via interface gráfica.</li>
+              <li className="mb-1"><strong>Preenchimento Automático</strong>: Extensão do navegador consulta o WebSocket para preencher formulários.</li>
+              <li className="mb-1"><strong>Importação/Exportação</strong>: Bases de dados são importadas/exportadas com chaves mestras.</li>
+              <li className="mb-1"><strong>Arranque Automático</strong>: Configurável para iniciar com o sistema operativo.</li>
             </ol>
           </div>
         )}
@@ -142,24 +141,24 @@ function ProgramDocumentation() {
           <div>
             <h2 className="text-xl mb-4">Utilização</h2>
             <p className="mb-4">
-              O EZPass é um programa portátil que não requer instalação. Basta executar o executável para começar a usá-lo. Abaixo estão as instruções para as principais funcionalidades:
+              O EZPass é um programa portátil que não requer instalação. Basta executar o ficheiro executável para começar a utilizá-lo. Abaixo estão as instruções para as principais funcionalidades:
             </p>
             <h3 className="text-lg mt-4 mb-2">Instruções Básicas</h3>
             <ul className="list-disc pl-6 mb-4">
               <li className="mb-1"><strong>Ativar o WebSocket</strong>: Na interface, ative o servidor WebSocket para integração com a extensão do navegador.</li>
-              <li className="mb-1"><strong>Gerenciar Senhas</strong>: Use a interface gráfica para adicionar, editar ou excluir senhas. Importe/exporte bancos de dados através dos botões correspondentes.</li>
+              <li className="mb-1"><strong>Gerir Palavras-passe</strong>: Use a interface gráfica para adicionar, editar ou remover palavras-passe. Importe/exporte bases de dados através dos botões correspondentes.</li>
             </ul>
-            <h3 className="text-lg mt-4 mb-2">Casos de Uso Comuns</h3>
+            <h3 className="text-lg mt-4 mb-2">Casos de Utilização Comuns</h3>
             <ul className="list-disc pl-6 mb-4">
-              <li className="mb-1"><strong>Armazenamento de Senhas</strong>: Adicione credenciais para websites frequentemente acessados.</li>
-              <li className="mb-1"><strong>Autopreenchimento</strong>: Configure seletores de campos para que a extensão preencha formulários automaticamente.</li>
-              <li className="mb-1"><strong>Recuperação de Senhas</strong>: Use a chave mestra para acessar o banco de dados caso a senha seja esquecida.</li>
-              <li className="mb-1"><strong>Gerenciamento Multiplataforma</strong>: Exporte bancos de dados para uso em diferentes dispositivos.</li>
+              <li className="mb-1"><strong>Armazenamento de Palavras-passe</strong>: Adicione credenciais para websites acedidos frequentemente.</li>
+              <li className="mb-1"><strong>Preenchimento Automático</strong>: Configure seletores de campos para que a extensão preencha formulários automaticamente.</li>
+              <li className="mb-1"><strong>Recuperação de Palavras-passe</strong>: Use a chave mestra para aceder à base de dados caso a palavra-passe seja esquecida.</li>
+              <li className="mb-1"><strong>Gestão Multiplataforma</strong>: Exporte bases de dados para utilização em diferentes dispositivos.</li>
             </ul>
             <h3 className="text-lg mt-4 mb-2">Notas Adicionais</h3>
             <p className="mb-2">
-              - A extensão do navegador deve estar configurada para se conectar ao WebSocket em <code>127.0.0.1:9001</code>.<br />
-              - Armazene a chave mestra em um local seguro, pois ela é necessária para recuperação de acesso.
+              - A extensão do navegador deve estar configurada para se ligar ao WebSocket em <code>127.0.0.1:9001</code>.<br />
+              - Armazene a chave mestra num local seguro, pois é necessária para recuperação de acesso.
             </p>
           </div>
         )}
@@ -186,7 +185,7 @@ function ProgramDocumentation() {
                 </tr>
                 <tr className="border-b border-green-500">
                   <td className="p-2">ADD_PASSWORD</td>
-                  <td className="p-2">Adiciona uma nova senha com seletores.</td>
+                  <td className="p-2">Adiciona uma nova palavra-passe com seletores.</td>
                   <td className="p-2"><code>ADD_PASSWORD\|example.com\|user\|pass\|#user\|#pass</code></td>
                 </tr>
                 <tr className="border-b border-green-500">
@@ -196,7 +195,7 @@ function ProgramDocumentation() {
                 </tr>
                 <tr className="border-b border-green-500">
                   <td className="p-2">SET_WEBSITE_PREF</td>
-                  <td className="p-2">Define se senhas podem ser salvas para um website.</td>
+                  <td className="p-2">Define se palavras-passe podem ser guardadas para um website.</td>
                   <td className="p-2"><code>SET_WEBSITE_PREF:example.com\|1</code></td>
                 </tr>
                 <tr className="border-b border-green-500">
@@ -229,7 +228,7 @@ function ProgramDocumentation() {
           <div>
             <h2 className="text-xl mb-4">Histórico de Commits</h2>
             <p className="mb-4">
-              O desenvolvimento do EZPass foi conduzido por <strong>Ecztassy</strong>, com commits entre Março e Abril de 2025. Abaixo está o resumo das principais mudanças:
+              O desenvolvimento do EZPass foi conduzido por <strong>Ecztassy</strong>, com commits entre Março e Abril de 2025. Abaixo está o resumo das principais alterações:
             </p>
             <h3 className="text-lg mt-4 mb-2">2 de Abril de 2025</h3>
             <ul className="list-disc pl-6 mb-4">
@@ -256,16 +255,16 @@ function ProgramDocumentation() {
               <li className="mb-1"><strong>Delete .github/workflows/build.yml</strong>: Remoção de configuração anterior.</li>
               <li className="mb-1"><strong>Update build.yml</strong> (múltiplos): Iterações na configuração de build.</li>
               <li className="mb-1"><strong>Create build.yml</strong>: Nova configuração de build.</li>
-              <li className="mb-1"><strong>final version (password editing by extension)</strong>: Edição de senhas via extensão.</li>
+              <li className="mb-1"><strong>final version (password editing by extension)</strong>: Edição de palavras-passe via extensão.</li>
               <li className="mb-1"><strong>Delete ui/poppins directory, poppins directory</strong>: Remoção de fontes desnecessárias.</li>
-              <li className="mb-1"><strong>Delete app.db</strong>: Remoção de banco de dados de teste.</li>
+              <li className="mb-1"><strong>Delete app.db</strong>: Remoção de base de dados de teste.</li>
               <li className="mb-1"><strong>Delete src/ui.rs, src/mod.rs, src/backend.rs</strong>: Refatoração do código.</li>
               <li className="mb-1"><strong>final version</strong> (múltiplos): Finalização da versão estável.</li>
             </ul>
             <h3 className="text-lg mt-4 mb-2">20 de Março de 2025</h3>
             <ul className="list-disc pl-6 mb-4">
-              <li className="mb-1"><strong>encryption</strong>: Implementação do sistema de criptografia.</li>
-              <li className="mb-1"><strong>logout, startup fn</strong>: Funcionalidades de logout e inicialização automática.</li>
+              <li className="mb-1"><strong>encryption</strong>: Implementação do sistema de encriptação.</li>
+              <li className="mb-1"><strong>logout, startup fn</strong>: Funcionalidades de logout e arranque automático.</li>
             </ul>
             <h3 className="text-lg mt-4 mb-2">14 de Março de 2025</h3>
             <ul className="list-disc pl-6 mb-4">
@@ -273,8 +272,8 @@ function ProgramDocumentation() {
             </ul>
             <h3 className="text-lg mt-4 mb-2">11 de Março de 2025</h3>
             <ul className="list-disc pl-6 mb-4">
-              <li className="mb-1"><strong>Fill e Websocket</strong>: Desenvolvimento inicial do autopreenchimento e WebSocket.</li>
-              <li className="mb-1"><strong>otimizacao save file</strong>: Otimizações no salvamento de arquivos.</li>
+              <li className="mb-1"><strong>Fill e Websocket</strong>: Desenvolvimento inicial do preenchimento automático e WebSocket.</li>
+              <li className="mb-1"><strong>otimizacao save file</strong>: Otimizações na gravação de ficheiros.</li>
             </ul>
           </div>
         )}
@@ -311,7 +310,7 @@ function LanguageDocumentation() {
           <div>
             <h2 className="text-xl mb-4">Visão Geral do Slint</h2>
             <p className="mb-4">
-              Slint é uma linguagem declarativa para construir interfaces de usuário nativas. Foi criada para ser:
+              Slint é uma linguagem declarativa para construir interfaces de utilizador nativas. Foi criada para ser:
             </p>
             <ul className="list-disc pl-6 mb-4">
               <li className="mb-1">Declarativa - Descreve o que a UI deve ser, não como construí-la</li>
@@ -323,7 +322,7 @@ function LanguageDocumentation() {
             <h3 className="text-lg mt-4 mb-2">História e Contexto</h3>
             <p className="mb-4">
               O Slint foi desenvolvido como parte do projeto SixtyFPS (agora Slint) para fornecer uma maneira moderna
-              de criar interfaces de usuário performáticas e bonitas. Ele combina elementos de QML, HTML e outras
+              de criar interfaces de utilizador performáticas e bonitas. Combina elementos de QML, HTML e outras
               linguagens declarativas com um sistema de tipos forte e compilação eficiente.
             </p>
             
@@ -347,7 +346,7 @@ function LanguageDocumentation() {
         {activeTab === "components" && (
           <div>
             <h2 className="text-xl mb-4">Componentes no EzPass</h2>
-            <p className="mb-4">Seu projeto utiliza vários componentes personalizados e padrão:</p>
+            <p className="mb-4">O seu projeto utiliza vários componentes personalizados e padrão:</p>
             
             <h3 className="text-lg mt-4 mb-2">Componentes Personalizados</h3>
             <table className="w-full border-collapse mb-6">
@@ -368,7 +367,7 @@ function LanguageDocumentation() {
                 </tr>
                 <tr className="border-b border-green-500">
                   <td className="p-2 font-mono">PasswordCard</td>
-                  <td className="p-2">Cartão para exibir informações de senha</td>
+                  <td className="p-2">Cartão para exibir informações de palavra-passe</td>
                 </tr>
                 <tr className="border-b border-green-500">
                   <td className="p-2 font-mono">LoginWindow</td>
@@ -376,7 +375,7 @@ function LanguageDocumentation() {
                 </tr>
                 <tr className="border-b border-green-500">
                   <td className="p-2 font-mono">BlackSquareWindow</td>
-                  <td className="p-2">Janela principal do gerenciador de senhas</td>
+                  <td className="p-2">Janela principal do gestor de palavras-passe</td>
                 </tr>
               </tbody>
             </table>
@@ -412,7 +411,7 @@ function LanguageDocumentation() {
         {activeTab === "properties" && (
           <div>
             <h2 className="text-xl mb-4">Sistema de Propriedades</h2>
-            <p className="mb-4">Slint usa propriedades para gerenciar estado e dados:</p>
+            <p className="mb-4">Slint usa propriedades para gerir estado e dados:</p>
             
             <h3 className="text-lg mt-4 mb-2">Tipos de Propriedades</h3>
             <table className="w-full border-collapse mb-6">
@@ -469,11 +468,11 @@ Rectangle {
             <div className="border border-green-500 p-4 my-4">
               <p>Principais propriedades utilizadas:</p>
               <ul className="list-disc pl-6 mt-2">
-                <li className="mb-1"><span className="font-mono">password_entries</span> - Lista de entradas de senha</li>
-                <li className="mb-1"><span className="font-mono">panelVisible</span> - Controle de visibilidade do painel</li>
+                <li className="mb-1"><span className="font-mono">password_entries</span> - Lista de entradas de palavras-passe</li>
+                <li className="mb-1"><span className="font-mono">panelVisible</span> - Controlo de visibilidade do painel</li>
                 <li className="mb-1"><span className="font-mono">selected_*</span> - Propriedades para edição</li>
                 <li className="mb-1"><span className="font-mono">isAddMode</span> - Modo de adição/edição</li>
-                <li className="mb-1"><span className="font-mono">autostart_enabled</span> - Configuração de auto-início</li>
+                <li className="mb-1"><span className="font-mono">autostart_enabled</span> - Configuração de arranque automático</li>
               </ul>
             </div>
           </div>
@@ -502,7 +501,7 @@ Rectangle {
                 <tr className="border-b border-green-500">
                   <td className="p-2 font-mono">register-clicked</td>
                   <td className="p-2">LoginWindow</td>
-                  <td className="p-2">Ação de registro</td>
+                  <td className="p-2">Ação de registo</td>
                 </tr>
                 <tr className="border-b border-green-500">
                   <td className="p-2 font-mono">edit-clicked</td>
@@ -512,12 +511,12 @@ Rectangle {
                 <tr className="border-b border-green-500">
                   <td className="p-2 font-mono">delete-clicked</td>
                   <td className="p-2">PasswordCard</td>
-                  <td className="p-2">Excluir entrada</td>
+                  <td className="p-2">Remover entrada</td>
                 </tr>
                 <tr className="border-b border-green-500">
                   <td className="p-2 font-mono">toggle_autostart</td>
                   <td className="p-2">BlackSquareWindow</td>
-                  <td className="p-2">Configurar auto-início</td>
+                  <td className="p-2">Configurar arranque automático</td>
                 </tr>
                 <tr className="border-b border-green-500">
                   <td className="p-2 font-mono">websocket</td>
